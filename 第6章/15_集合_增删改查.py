@@ -1,0 +1,64 @@
+# coding=utf-8
+
+# 集合 - 增
+# add方法：向集合中添加元素
+# s1 = {10, 20, 30, 40, 50}
+# s1.add(60)
+# print(s1)
+
+# update方法：向集合中添加元素（必须传递可迭代对象，例如：列表、元组、集合等）
+# s1 = {10, 20, 30, 40, 50}
+# s1.update([60, 70])  # 传入列表
+# s1.update((80, 90))  # 传入元组
+# s1.update({100, 200})  # 传入集合
+# s1.update(range(300, 308))  # 传入 range() 遍历函数
+# s1.update('helloworld')
+# print(s1)
+
+# 集合 - 删
+# remove方法：从集合中移除元素（移除不存在的元素，会报错）
+# s1 = {10, 20, 30, 40, 50}
+# s1.remove(20)
+# print(s1) # {50, 40, 10, 30}
+# s1.remove(80) # KeyError: 80
+
+# discard方法：从集合中移除元素（移除不存在的元素，不会报错）
+# s1 = {10, 20, 30, 40, 50}
+# s1.discard(20)
+# print(s1)  # {50, 40, 10, 30}
+
+# pop方法：从集合中移除一个任意元素，返回值是移除的那个元素
+# s1 = {10, 20, 30, 40, 50}
+# s2 = {'你好', '北京', '尚硅谷', 'hello'}
+# result = s1.pop()
+# print(s1)
+# print(result)
+# result = s2.pop()
+# print(s2)
+# print(result)
+
+# clear方法：清空集合
+# s1 = {10, 20, 30, 40, 50}
+# result = s1.clear()
+# print(result)
+# print(s1)
+
+# 改
+# 使用 add + remove 的组合，来实现修改的效果
+s1 = {10, 20, 30, 40, 50}
+# 将 集合中的 20 改成 66
+s1.remove(20)
+s1.add(66)
+print(s1)
+
+# 查：集合不能通过下标去读取元素，但能通过 【成员运算符】去查看集合中是否包含指定元素
+# 由于成员运算符适用于所有数据容器，所以我们会等所有数据容器都讲完以后，再说成员运算符
+s1 = {10, 20, 30, 40, 50}
+# s1[0] # TypeError: 'set' object is not subscriptable
+
+# 先提前感受一下成员运算符
+result = 20 in s1
+print(result)  # True
+
+result = 20 not in s1
+print(result)  # False
