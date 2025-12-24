@@ -22,7 +22,7 @@ def test2(**kwargs):
     print(type(kwargs))
 
 
-# 调用含糊
+# 调用函数
 test2(name='张三', gender='男', age='18', height='172')
 
 
